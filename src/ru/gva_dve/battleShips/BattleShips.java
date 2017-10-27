@@ -10,7 +10,6 @@ import java.util.*;
 
 public class BattleShips {
 
-    static Scanner sc = new Scanner(System.in);
     static Random rm = new Random();
 
     public static void main(String[] args) {
@@ -18,7 +17,7 @@ public class BattleShips {
         ArrayList<String> position = new ArrayList<>();
 
         int travelCounter = 0;
-        int onePointPosition = rm.nextInt(4);
+        int onePointPosition = rm.nextInt(7);
 
         position.add(String.valueOf(onePointPosition));
         position.add(String.valueOf(onePointPosition + 1));
@@ -29,24 +28,16 @@ public class BattleShips {
 
         while (!ship.getPosition().isEmpty()) {
 
-            System.out.println(ship.checkship(locationHits()));
+            System.out.println(ship.checkship(Input.locationHits()));
             travelCounter++;
 
         }
 
+        System.out.println("Вы выиграли!!!");
         System.out.println("Кол-во ходов за игру - " + travelCounter);
-   }
+    }
 
-    /**
-     * Данный метод для ввода координат выстрела.
-     *
-     * @return координату выстрела строчного типа.
-     */
-    public static String locationHits(){
-        System.out.print("Введите координаты выстрела -");
-        return  sc.next();
-   }
-    
+
 
 
 }

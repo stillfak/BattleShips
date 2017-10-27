@@ -3,7 +3,7 @@ package ru.gva_dve.battleShips;
 import java.util.*;
 
 /**
- * Вспомогательный класс для ввода данных.
+ * Вспомогательный класс для ввода и проверки данных пользователя.
  *
  * @author Gavrikov V && Dubinin V 15it18.
  */
